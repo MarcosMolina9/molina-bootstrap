@@ -1,0 +1,521 @@
+body{
+    background: linear-gradient(red, green, blue, yellow);
+}
+
+/*comenzando estilos en header*/
+/*h1{
+    background-color: black;
+    color: red;
+    padding: 50px 600px;
+}
+
+/*comenzando estilos en main*/
+/*.nav{
+    background-color: rgb(11, 12, 5);
+    
+}
+
+.link a{
+    color: white;
+    line-height: 2;
+}
+
+/*comenzando estilos en section*/
+/*.block h3{
+    border: solid 7px black;
+    padding: 10px 600px;
+    background-color: white;
+}
+
+.line{
+    line-height: 1.5;
+}
+
+span{
+    font-style: oblique;
+    color: aliceblue;
+    background-color: black;
+}
+
+/*comenzando estilos en footer*/
+/*.style p{
+    color: rgb(253, 250, 249);
+    border: solid 3px black;
+    display: inline-block;
+    padding: 3px 75px;
+}
+
+.doc{
+    background-color: green;
+}
+
+/*comienza estilos de otros html*/
+
+/*.link2{
+    display: inline-block;
+    background-color: rgb(6, 6, 6);
+}
+
+.link2 a{
+    color: rgb(255, 0, 0);
+    line-height: 3;
+    padding: 0px 10px;
+}
+
+.redes{
+    display: inline-block;
+    padding: 50px 0px 0px 20px;
+}
+
+.redes a{
+    color: rgb(246, 9, 9);
+    background-color: black;
+    padding: 5px;
+}
+
+#redes{
+    background-color: black;
+}
+
+#center{
+    margin: 50px;
+    width: 600px;
+}
+table{
+    background-color: white;
+    width: 50%;
+    border-collapse: collapse;
+}
+*/
+
+
+th, td{
+    border: solid 1px black;
+    padding: 0;
+    background: radial-gradient(white, red);
+   
+}
+/* 
+h3{
+    border: solid 7px black;
+    padding: 10px 600px;
+    background-color: rgb(245, 241, 9);
+    border: solid 5px red;
+}
+
+.p1{
+    background-color: white;
+    padding: 10px;
+}
+
+.itens{
+    color: rgb(235, 255, 16);
+}
+
+.ul-li{
+    color: white;
+}
+
+ */   
+img{
+    display: flex;
+    width: 100%;
+}
+
+/*comienza grid de index.html*/
+
+/*grid header*/
+
+.header-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "logo navbar navbar navbar"
+    "h1 h1 h1 h1"
+    ;
+}
+
+
+/*grid de header/div/h1*/
+
+.h1{
+    background-color: black;
+    color: red;
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+}
+
+/*comienza grid header/div/img*/
+
+.logo{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+}
+
+/*comienza grid de header/nav*/
+
+.navbar{
+    background-color: blue;
+    grid-area: navbar;
+}
+
+.navbar{ 
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.navbar-nav li{
+    list-style: none;
+    background-color: red;
+}
+
+.navbar-nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-nav li a:hover{
+    color: black;
+}
+
+/* grid section*/
+
+.section-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    "block"
+    ;
+}
+
+.block{
+    grid-area: block; 
+}
+
+.one{
+    grid-area: one;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    padding: 10px;
+    border: solid 5px;
+}
+
+.two{
+    grid-area: two;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    padding: 10px;
+    border: solid 5px;
+}
+
+.p1{
+    grid-area: p1;
+    display: flex;
+    justify-content: start;
+}
+
+.p2{
+    grid-area: p2;
+    display: flex;
+    justify-content: start;
+}
+
+/*grid footer*/
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+      
+}
+
+.style{
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    color: yellow;
+}
+
+/*responsive index.html*/
+
+@media screen and (max-width: 400px){
+
+    .header-container{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: (3, 1fr);
+        grid-template-areas: 
+        "logo" "h1" "navbar";
+    }
+
+  
+    .h1{
+        grid-area: h1;
+        display: flex;
+        justify-content: center center;
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .logo{
+        grid-area: logo;
+        display: flex;
+        justify-content: start;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .navbar li {
+        grid-area: navbar;
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .style{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        color: yellow;
+    }
+
+}
+
+/*responsive index.html tablet*/
+
+@media screen and (min-width: 401px) and (max-width: 768px){
+
+    .header-container{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: (2, 1fr);
+        grid-template-areas: 
+        "navbar . logo"
+        "h1 h1 h1"
+        ;
+    }
+
+  
+    .h1{
+        grid-area: h1;
+        display: flex;
+        justify-content: center center;
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .logo{
+        grid-area: logo;
+        display: flex;
+        justify-content: end;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .navbar li {
+        grid-area: navbar;
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .style{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        color: yellow;
+    }
+
+}
+
+
+/*comienza estilos de grid en hoja tokenomics.html*/
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+    "nav-bar nav-bar"
+    ;
+}
+
+.nav-bar{
+    background-color: red;
+    grid-area: nav-bar;
+}
+
+.nav-ul{ 
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-ul li{
+    list-style: none;
+}
+
+.nav-ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-ul li a:hover{
+    color: black; 
+}
+
+
+
+.divi{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "li img img ."
+    "table img img ."
+    ;
+}
+
+.ul-li{
+    grid-area: li;  
+}
+
+.imgt{
+    grid-area: img;
+}
+
+.table{
+    grid-area: table;
+    display: flex;
+    width: 75%;
+    border-collapse: collapse; 
+
+}
+
+
+
+.pie{
+    display: flex;
+    background-color: green;
+    margin: 30px 0px;
+    
+}
+
+.redes a{
+    color: white;
+   
+}
+
+
+/*responsive de tokenomics.html*/
+
+@media screen and (max-width: 400px){
+
+.container{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr); 
+    grid-template-areas:
+    "nav-bar nav-bar"
+    ;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+
+.divi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "li li ."
+    "img img ."
+    "table table ."
+    ;
+}
+
+
+.imgt{
+    margin: 0px 0px 30px 0px;
+    
+}
+
+}
+
+/*responsive tokenomics.html tablet*/
+
+@media screen and (min-width: 401px) and (max-width: 768px){
+
+    .container{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(1, 1fr); 
+        grid-template-areas:
+        "nav-bar"
+        ;
+    }
+    
+    
+    .divi{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "li . table ."
+        "img img . ."
+        ;
+    }
+
+}
